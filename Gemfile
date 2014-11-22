@@ -8,27 +8,23 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-
+gem 'sqlite3'
 
 # https://gist.github.com/baojjeu/921cf3657b0725a9646a
 group :development, :test do
-  gem 'rspec-rails'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
 
-  # Create tests data
-  gem 'factory_girl_rails'
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0.0.beta4'
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+
+  gem 'rspec-rails', '~> 3.1.0'
 end
 
 group :test do
-
-  # Tests web pages
-  gem 'capybara'
-
-  # A clean slate for databases
-  gem 'database_cleaner'
-
-  # View errors in you web browser
-  gem 'launchy'
-
-  # For tests that require JavaScript
-  gem 'selenium-webdriver'
+  gem 'capybara', '~> 2.4'
+  gem 'factory_girl_rails', '~> 4.5'
 end
